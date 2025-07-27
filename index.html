@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Raju's Road Trip Begins</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(#87CEEB, #f0f8ff);
+      font-family: 'Comic Sans MS', cursive;
+      overflow: hidden;
+    }
+    .scene {
+      text-align: center;
+      padding-top: 40px;
+    }
+    .road {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: #444;
+    }
+    .lane {
+      position: absolute;
+      top: 45px;
+      width: 100%;
+      height: 10px;
+      background: repeating-linear-gradient(
+        to right,
+        white,
+        white 30px,
+        #444 30px,
+        #444 60px
+      );
+    }
+    .car {
+      position: absolute;
+      bottom: 110px;
+      left: -250px;
+      width: 200px;
+      animation: drive 8s linear forwards;
+    }
+    .raju {
+      width: 120px;
+      animation: bounce 1s infinite alternate;
+    }
+    .speech {
+      background: #fff3e0;
+      padding: 10px 20px;
+      border-radius: 15px;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 1.2em;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      animation: fadein 2s ease-in;
+    }
+    @keyframes drive {
+      0% { left: -250px; }
+      100% { left: 100%; }
+    }
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-15px); }
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .voiceover {
+      position: absolute;
+      bottom: 130px;
+      left: 20px;
+      right: 20px;
+      text-align: center;
+      font-style: italic;
+      font-size: 1em;
+      color: #333;
+      animation: fadein 3s ease-in;
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <img src="https://i.ibb.co/n8kC1HN/raju-car.png" alt="Raju" class="raju" />
+    <div class="speech">Let’s go on a family road trip to Manali!</div>
+  </div>
+
+  <div class="voiceover">🎙️ Meet Raju, a road trip enthusiast. But today, he's in for a smart surprise!</div>
+
+  <div class="road">
+    <div class="lane"></div>
+  </div>
+  <img src="https://i.ibb.co/NWrx5RD/car-icon.png" alt="Red Car" class="car" />
+
+</body>
+</html>
