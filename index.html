@@ -2,97 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Raju's Road Trip Begins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucky Home Decor</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(#87CEEB, #f0f8ff);
-      font-family: 'Comic Sans MS', cursive;
-      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
-    .scene {
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
       text-align: center;
-      padding-top: 40px;
+      font-size: 2rem;
+      color: #f4d03f;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
-    .road {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 100px;
-      background: #444;
+    nav {
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    .lane {
-      position: absolute;
-      top: 45px;
-      width: 100%;
-      height: 10px;
-      background: repeating-linear-gradient(
-        to right,
-        white,
-        white 30px,
-        #444 30px,
-        #444 60px
-      );
-    }
-    .car {
-      position: absolute;
-      bottom: 110px;
-      left: -250px;
-      width: 200px;
-      animation: drive 8s linear forwards;
-    }
-    .raju {
-      width: 120px;
-      animation: bounce 1s infinite alternate;
-    }
-    .speech {
-      background: #fff3e0;
-      padding: 10px 20px;
-      border-radius: 15px;
-      display: inline-block;
-      margin-top: 20px;
-      font-size: 1.2em;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      animation: fadein 2s ease-in;
-    }
-    @keyframes drive {
-      0% { left: -250px; }
-      100% { left: 100%; }
-    }
-    @keyframes bounce {
-      from { transform: translateY(0); }
-      to { transform: translateY(-15px); }
-    }
-    @keyframes fadein {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .voiceover {
-      position: absolute;
-      bottom: 130px;
-      left: 20px;
-      right: 20px;
-      text-align: center;
-      font-style: italic;
-      font-size: 1em;
+    nav a {
       color: #333;
-      animation: fadein 3s ease-in;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #f4d03f;
+      color: #000;
+    }
+    section {
+      padding: 60px 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin: 40px;
+      border-radius: 20px;
+    }
+    h2 {
+      color: #ffeaa7;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #ccc;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <div class="scene">
-    <img src="https://i.ibb.co/n8kC1HN/raju-car.png" alt="Raju" class="raju" />
-    <div class="speech">Let’s go on a family road trip to Manali!</div>
-  </div>
 
-  <div class="voiceover">🎙️ Meet Raju, a road trip enthusiast. But today, he's in for a smart surprise!</div>
+  <header>
+    🏡 Lucky Home Decor
+  </header>
 
-  <div class="road">
-    <div class="lane"></div>
-  </div>
-  <img src="https://i.ibb.co/NWrx5RD/car-icon.png" alt="Red Car" class="car" />
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Lucky Home Decor</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      We transform spaces into elegant, vibrant homes with personalized designs.
+      Explore our premium selections of false ceilings, TV units, wall panels, and more.
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1600607687168-906f8edc8a19" alt="Living Room">
+      <img src="https://images.unsplash.com/photo-1586105251261-72a756497a12" alt="Ceiling Design">
+      <img src="https://images.unsplash.com/photo-1615874959474-d609969a4d4d" alt="TV Unit">
+      <img src="https://images.unsplash.com/photo-1600585153873-69edb2d68a3f" alt="Decor Wall">
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul style="max-width: 600px; margin: auto; font-size: 1.1rem;">
+      <li>🧱 False Ceiling Design (Premium & Basic)</li>
+      <li>📺 Customized TV Unit Layouts</li>
+      <li>🖼️ Decorative Wall Paneling</li>
+      <li>🎨 Interior Paint & Wallpaper Styling</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">
+      📞 Phone: +91-98765-43210 <br />
+      📧 Email: contact@luckyhomedecor.in <br />
+      📍 Location: Lucknow, Uttar Pradesh
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Lucky Home Decor. All rights reserved.
+  </footer>
 
 </body>
 </html>
